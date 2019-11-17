@@ -1,10 +1,27 @@
 # Mofly76 #
-function LetraNIF ($dni) {
-/* Obtiene letra del NIF a partir del DNI */
-  $valor= (int) ($dni / 23);
-  $valor *= 23;
-  $valor= $dni - $valor;
-  $letras= "TRWAGMYFPDXBNJZSQVHLCKEO";
-  $letraNif= substr ($letras, $valor, 1);
-  return $letraNif;
-}
+<!DOCTYPE html>
+<html lang="es-es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function averigua() {
+        cadena = "TRWAGMYFPDXBNJZSQVHLCKET"
+        posicion = formulario.dni.value % 23
+        letra = cadena.substring(posicion, posicion + 1)
+        document.formulario.dni.value = formulario.dni.value + " - " + letra
+    }
+</script>
+
+<body>
+    <form name="formulario">
+       <label for="dni"  DNI:></label><br>
+        <input type="text" name="dni" id="dni" minlength="1" maxlength="8">
+        <input type="button" value="OK" language="JavaScript" onclick="averigua()">
+    </form>
+
+    </form>
