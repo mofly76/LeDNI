@@ -23,5 +23,3 @@
         <input type="text" name="dni" id="dni" minlength="1" maxlength="8">
         <input type="button" value="OK" language="JavaScript" onclick="averigua()">
     </form>
-
-    </form>
